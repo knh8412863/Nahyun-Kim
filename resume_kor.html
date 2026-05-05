@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김나현 이력서</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+        max-width: 860px;
+        margin: 40px auto;
+        padding: 0 16px 72px;
+        line-height: 1.68;
+        color: #111;
+        background: #fff;
+      }
+      header {
+        position: relative;
+        border-bottom: 2px solid #222;
+        padding-bottom: 12px;
+        margin-bottom: 28px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+      header p {
+        margin: 4px 0 0;
+        font-size: 0.95rem;
+      }
+      nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      nav a {
+        font-size: 0.85rem;
+        color: #0645ad;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+      nav a:hover {
+        border-bottom-color: #0645ad;
+      }
+      section {
+        padding-top: 18px;
+        margin-top: 18px;
+        border-top: 1px solid #222;
+      }
+      section:first-of-type {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+      }
+      section > h2 {
+        font-size: 1.65rem;
+        margin: 0 0 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .entry {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        margin-top: 18px;
+      }
+      .entry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 16px 32px;
+      }
+      .entry-main {
+        flex: 1;
+      }
+      .entry-title {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .entry-meta {
+        font-size: 0.95rem;
+        color: #333;
+      }
+      .entry-meta a {
+        color: #a9a9a9;
+      }
+      .entry-period {
+        width: 150px;
+        text-align: right;
+        font-size: 0.9rem;
+        color: #555;
+        white-space: nowrap;
+      }
+      .entry.compact .entry-period {
+        width: 110px;
+        font-size: 0.85rem;
+      }
+      .entry.no-period .entry-period {
+        display: none;
+      }
+      ul {
+        margin: 8px 0 0 20px;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      .github-link a {
+        color: #000;
+        text-decoration: none;
+      }
+      .github-link a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        margin-top: 48px;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #666;
+      }
+      @media (max-width: 640px) {
+        header {
+          text-align: left;
+        }
+        nav {
+          position: static;
+          margin-bottom: 0.75rem;
+        }
+        header h1 {
+          margin-top: 0;
+        }
+        .entry {
+          flex-direction: column;
+          gap: 12px;
+        }
+        .entry-period {
+          width: auto;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>김나현</h1>
+          <p>
+            <span>
+              <i class="fa-solid fa-envelope"></i>
+              knh8412863@gmail.com
+            </span>
+            |
+            <span class="github-link">
+              <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/knh8412863" target="_blank" rel="noreferrer">knh8412863</a>
+            </span>
+          </p>
+    </header>
+
+    <section>
+      <h2>🗂️ 프로젝트</h2>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🧬 난임 환자 대상 임신 성공 여부 예측 🧬</div>
+          <div class="entry-meta">
+            헬스케어 데이터 분류 모델 ·
+            <a href="https://github.com/knh8412863/Fertility-Success-Predictor" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>난임 시술 데이터를 활용해 임신 성공 여부를 예측하는 분류 모델 개발</li>
+            <li>(팀장) EDA, 결측치 처리, 도메인 파생변수 설계, LightGBM/CatBoost 앙상블 전략 주도</li>
+            <li>데이터 누수를 방지한 검증 구조로 Public AUC 0.7421 달성</li>
+          </ul>
+        </div>
+        <div class="entry-period">2026.04</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🫀 칼로리 소모량 예측 AI 해커톤 🫀</div>
+          <div class="entry-meta">
+            생체 지표 기반 회귀 예측 모델 ·
+            <a href="https://github.com/knh8412863/BioMetric-Calorie-Predictor" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>심박수, 체온, BMI 등 생체 지표 기반 칼로리 소모량 회귀 예측 모델 개발</li>
+            <li>(팀장) 데이터 전처리, CatBoost 모델링, 파생변수 설계 및 교차 검증 전략 수립</li>
+            <li>RMSE 0.47 달성 및 리더보드 상위권 기록</li>
+          </ul>
+        </div>
+        <div class="entry-period">2026.02 ~ 2026.03</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🚬 흡연 여부에 따른 건강지표 차이 분석 🚬</div>
+          <div class="entry-meta">
+            건강검진 데이터 통계 분석 ·
+            <a href="https://github.com/knh8412863/Smoking-Health-Analysis" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>7,000건의 건강검진 데이터를 기반으로 흡연 여부와 대사·혈액·구강 지표 간 상관관계 분석</li>
+            <li>(팀장) 가설 설정, 데이터 정제, T-test 및 카이제곱 검정 기반 인사이트 도출</li>
+          </ul>
+        </div>
+        <div class="entry-period">2026.01</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🦾 3D 프린팅 기반 근전도 로봇 의수 🦾</div>
+          <div class="entry-meta">재활공학 하드웨어 프로토타입</div>
+          <ul>
+            <li>3D 프린팅, Flex 센서, 근전도 센서, Arduino를 활용한 전동 로봇 의수 프로토타입 제작</li>
+            <li>(팀장) 하드웨어 설계, 3D 프린팅, 센서 신호 기반 서보모터 제어 로직 구현 담당</li>
+          </ul>
+        </div>
+        <div class="entry-period">2019.09 ~ 2019.12</div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>📖 교육</h2>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">헬스케어 데이터 기반 인공지능 디지털 의료 웹 서비스 개발자 양성과정</div>
+          <div class="entry-meta">오즈코딩스쿨</div>
+          <ul>
+            <li>헬스케어 도메인 지식을 바탕으로 데이터 분석부터 AI 모델링, 웹 서비스 배포까지의 과정 수행</li>
+            <li>AI & 데이터 분석: 머신러닝/딥러닝 모델 설계 및 의학용어·질병 데이터를 활용한 헬스케어 특화 데이터 전처리 및 시각화 역량 습득</li>
+            <li>웹 서비스 개발: FastAPI 프레임워크를 활용한 RESTful API 설계 및 HTML/CSS/Javascript 기반의 반응형 웹 서비스 구조 구현</li>
+            <li>클라우드 및 인프라: Docker 컨테이너 가상화와 AWS 환경을 활용한 클라우드 기반 서비스 배포 및 인프라 운영 프로세스 학습</li>
+            <li>실무 중심의 미니 프로젝트와 해커톤 참여를 통해 데이터 기반 예측 모델 구현 및 Git/GitHub 기반의 팀 협업 워크플로우 숙달</li>
+          </ul>
+        </div>
+        <div class="entry-period">2025.12 ~</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">사물인터넷(IoT) 국비 교육 과정</div>
+          <div class="entry-meta"></div>
+          <ul>
+            <li>아두이노 IDE 환경 기반의 하드웨어 제어 및 IoT 시스템 기초 습득</li>
+            <li>조도·초음파·온습도 등 10여 종의 센서 데이터 수집 및 서보모터, 블루투스 모듈을 활용한 액추에이터 제어 실습</li>
+            <li>C언어 기반의 임베디드 프로그래밍 및 시리얼 통신을 통한 데이터 모니터링 역량 확보</li>
+         </ul>
+        </div>
+        <div class="entry-period">2023.01</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">생체역학 실험실 학부연구생</div>
+          <div class="entry-meta">대구대학교 재활공학과</div>
+          <ul>
+            <li>자기주도적 기술 습득: C언어 및 AutoCAD를 추가 학습하여 기술적 문제 해결 역량 배양</li>
+            <li>연구실 운영 지원: 연구실 인프라(3D 프린터 등 장비) 및 비품 관리와 교수님 수업 보조를 전담하며 원활한 연구/교육 환경 조성에 기여</li>
+            <li>데이터 관리 보조: 실험 데이터 측정 및 기록 보조 업무를 수행하며 데이터의 무결성과 연구 프로세스 전반에 대한 이해도 제고</li>
+            <li>교내 프로젝트 참여: 연구실 내 자습을 통해 쌓은 역량을 바탕으로 '근전도 기반 로봇 의수 제작' 대회에 참여하여 실무 적용 경험 보유</li>
+         </ul>
+        </div>
+        <div class="entry-period">2018.09 ~ 2020.02</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📚 자격증</h2>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">정보처리기사</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/1EEdagRCTOso8u04ywTQ8W1oVCyj7KBxt/preview" target="_blank" rel="noreferrer"
+              >한국산업인력공단</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">2025.12</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">CCNA (200-301)</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/15f9YwAhg78VYImnNqa1EfFQvZNIQ9mlh/preview" target="_blank" rel="noreferrer"
+              >CISCO</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">2025.01 ~ 2028.01</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">네트워크관리사 2급</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/13Vf7Rb8dEFKPRS6GcHDu04yEbPH0PHOO/preview" target="_blank" rel="noreferrer"
+              >한국정보통신자격협회</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">2023.04 ~ 2026.04</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">SQLD</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/1YJvS__vWkl2lIxVnqL5JX9t8jHNIT7gA/preview" target="_blank" rel="noreferrer"
+              >한국데이터산업진흥원</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">2024.06</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">한국사능력검정시험 1급</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/1kcmLl4yd1k4vW-xJCc4qAmLWss58QaUc/preview" target="_blank" rel="noreferrer"
+              >국사편찬위원회</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">2025.06</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛠️ 기술</h2>
+      <div class="entry-grid">
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Backend</div>
+            <div class="entry-meta">
+              <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C</li>
+                <li>FastAPI</li>
+                <li>PyMongo</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">DevOps</div>
+            <div class="entry-meta">
+              <ul>
+                <li>Docker</li>
+                <li>Git / GitHub</li>
+                <li>Kubernetes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Frontend</div>
+            <div class="entry-meta">
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">언어</div>
+            <div class="entry-meta">
+              <ul>
+                <li>한국어(모국어)</li>
+                <li>영어 (<a href="https://drive.google.com/file/d/153VaGSEqk9APbcca-PxHYhbYWuTnXZZU/preview" target="_blank" rel="noreferrer">TOEIC 860</a>)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 학력</h2>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">컴퓨터 공학 학사</div>
+          <div class="entry-meta">독학 학위제</div>
+        </div>
+        <div class="entry-period">2022.12 ~ 2024.08</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">재활공학과 (3학년 중퇴)</div>
+          <div class="entry-meta">대구대학교 · GPA 4.21 / 4.5</div>
+        </div>
+        <div class="entry-period">2018.03 ~ 2020.02</div>
+      </div>
+    </section>
+
+
+    <footer>© 2026 김나현 · 마지막 업데이트: 2026년 5월</footer>
+  </body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nahyun Kim Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+        max-width: 860px;
+        margin: 40px auto;
+        padding: 0 16px 72px;
+        line-height: 1.68;
+        color: #111;
+        background: #fff;
+      }
+      header {
+        position: relative;
+        border-bottom: 2px solid #222;
+        padding-bottom: 12px;
+        margin-bottom: 28px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+      header p {
+        margin: 4px 0 0;
+        font-size: 0.95rem;
+      }
+      nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      nav a {
+        font-size: 0.85rem;
+        color: #0645ad;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+      nav a:hover {
+        border-bottom-color: #0645ad;
+      }
+      section {
+        padding-top: 18px;
+        margin-top: 18px;
+        border-top: 1px solid #222;
+      }
+      section:first-of-type {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+      }
+      section > h2 {
+        font-size: 1.65rem;
+        margin: 0 0 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .entry {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        margin-top: 18px;
+      }
+      .entry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 16px 32px;
+      }
+      .entry-main {
+        flex: 1;
+      }
+      .entry-title {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .entry-meta {
+        font-size: 0.95rem;
+        color: #333;
+      }
+      .entry-meta a {
+        color: #a9a9a9;
+      }
+      .entry-period {
+        width: 150px;
+        text-align: right;
+        font-size: 0.9rem;
+        color: #555;
+        white-space: nowrap;
+      }
+      .entry.compact .entry-period {
+        width: 110px;
+        font-size: 0.85rem;
+      }
+      .entry.no-period .entry-period {
+        display: none;
+      }
+      ul {
+        margin: 8px 0 0 20px;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      .github-link a {
+        color: #000;
+        text-decoration: none;
+      }
+      .github-link a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        margin-top: 48px;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #666;
+      }
+      @media (max-width: 640px) {
+        header {
+          text-align: left;
+        }
+        nav {
+          position: static;
+          margin-bottom: 0.75rem;
+        }
+        header h1 {
+          margin-top: 0;
+        }
+        .entry {
+          flex-direction: column;
+          gap: 12px;
+        }
+        .entry-period {
+          width: auto;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Nahyun Kim</h1>
+      <p>
+        <span>
+          <i class="fa-solid fa-envelope"></i>
+          knh8412863@gmail.com
+        </span>
+        |
+        <span class="github-link">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/knh8412863" target="_blank" rel="noreferrer">knh8412863</a>
+        </span>
+      </p>
+    </header>
+
+    <section>
+      <h2>🗂️ Projects</h2>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🧬 Fertility Treatment Success Prediction 🧬</div>
+          <div class="entry-meta">
+            Healthcare data classification model ·
+            <a href="https://github.com/knh8412863/Fertility-Success-Predictor" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>Developed a classification model to predict pregnancy success using fertility treatment data</li>
+            <li>Led EDA, missing value handling, domain feature engineering, and LightGBM/CatBoost ensemble strategy</li>
+            <li>Achieved Public AUC 0.7421 with a validation design focused on preventing data leakage</li>
+          </ul>
+        </div>
+        <div class="entry-period">Apr 2026</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🫀 Calorie Burn Prediction AI Hackathon 🫀</div>
+          <div class="entry-meta">
+            Regression model based on biometric indicators ·
+            <a href="https://github.com/knh8412863/BioMetric-Calorie-Predictor" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>Built a regression model to predict calorie expenditure using biometric indicators such as heart rate, body temperature, and BMI</li>
+            <li>Led data preprocessing, CatBoost modeling, feature engineering, and cross-validation strategy</li>
+            <li>Achieved RMSE 0.47 and ranked near the top of the leaderboard</li>
+          </ul>
+        </div>
+        <div class="entry-period">Feb 2026 ~ Mar 2026</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🚬 Smoking Status and Health Indicator Analysis 🚬</div>
+          <div class="entry-meta">
+            Statistical analysis of health checkup data ·
+            <a href="https://github.com/knh8412863/Smoking-Health-Analysis" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>Analyzed correlations between smoking status and metabolic, blood, and oral health indicators using 7,000 health checkup records</li>
+            <li>Led hypothesis setting, data cleaning, and insight generation using t-tests and chi-square tests</li>
+          </ul>
+        </div>
+        <div class="entry-period">Jan 2026</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">🦾 3D-Printed EMG-Based Robotic Prosthetic Hand 🦾</div>
+          <div class="entry-meta">Rehabilitation engineering hardware prototype</div>
+          <ul>
+            <li>Built an electric prosthetic hand prototype using 3D printing, flex sensors, EMG sensors, and Arduino</li>
+            <li>Led hardware design, 3D printing, and servo motor control logic based on sensor signals</li>
+          </ul>
+        </div>
+        <div class="entry-period">Sep 2019 ~ Dec 2019</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📖 Training</h2>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">Healthcare Data-Based AI Digital Medical Web Service Developer Program</div>
+          <div class="entry-meta">OZ Coding School</div>
+          <ul>
+            <li>Completed an end-to-end curriculum covering healthcare data analysis, AI modeling, web service development, and deployment</li>
+            <li>Built machine learning and deep learning models with healthcare-specific data preprocessing and visualization</li>
+            <li>Designed RESTful APIs with FastAPI and implemented responsive web service structures using HTML, CSS, and JavaScript</li>
+            <li>Studied cloud deployment and infrastructure operations using Docker and AWS environments</li>
+            <li>Practiced team collaboration with Git/GitHub through mini projects and hackathons</li>
+          </ul>
+        </div>
+        <div class="entry-period">Dec 2025 ~ Present</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">IoT Government-Funded Training Program</div>
+          <div class="entry-meta"></div>
+          <ul>
+            <li>Learned hardware control and IoT system fundamentals using the Arduino IDE</li>
+            <li>Collected sensor data from light, ultrasonic, temperature, and humidity sensors and controlled actuators with servo motors and Bluetooth modules</li>
+            <li>Gained experience in C-based embedded programming and serial communication for data monitoring</li>
+          </ul>
+        </div>
+        <div class="entry-period">Jan 2023</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">Undergraduate Research Assistant, Biomechanics Lab</div>
+          <div class="entry-meta">Department of Rehabilitation Engineering, Daegu University</div>
+          <ul>
+            <li>Self-studied C and AutoCAD to strengthen technical problem-solving skills</li>
+            <li>Supported lab operations by managing research equipment, including 3D printers, and assisting with classes</li>
+            <li>Assisted with experiment data measurement and recording to support research data integrity</li>
+            <li>Applied self-directed learning to a campus project building an EMG-based robotic prosthetic hand</li>
+          </ul>
+        </div>
+        <div class="entry-period">Sep 2018 ~ Feb 2020</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📚 Certifications</h2>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">Engineer Information Processing</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/1EEdagRCTOso8u04ywTQ8W1oVCyj7KBxt/preview" target="_blank" rel="noreferrer"
+              >Human Resources Development Service of Korea</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">Dec 2025</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">CCNA (200-301)</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/15f9YwAhg78VYImnNqa1EfFQvZNIQ9mlh/preview" target="_blank" rel="noreferrer"
+              >Cisco</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">Jan 2025 ~ Jan 2028</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">Network Administrator Level 2</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/13Vf7Rb8dEFKPRS6GcHDu04yEbPH0PHOO/preview" target="_blank" rel="noreferrer"
+              >Korea Information Communications Qualification Association</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">Apr 2023 ~ Apr 2026</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">SQL Developer (SQLD)</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/1YJvS__vWkl2lIxVnqL5JX9t8jHNIT7gA/preview" target="_blank" rel="noreferrer"
+              >Korea Data Agency</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">Jun 2024</div>
+      </div>
+      <div class="entry compact">
+        <div class="entry-main">
+          <div class="entry-title">Korean History Proficiency Test Level 1</div>
+          <div class="entry-meta">
+            <a href="https://drive.google.com/file/d/1kcmLl4yd1k4vW-xJCc4qAmLWss58QaUc/preview" target="_blank" rel="noreferrer"
+              >National Institute of Korean History</a
+            >
+          </div>
+        </div>
+        <div class="entry-period">Jun 2025</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛠️ Skills</h2>
+      <div class="entry-grid">
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Backend</div>
+            <div class="entry-meta">
+              <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C</li>
+                <li>FastAPI</li>
+                <li>PyMongo</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">DevOps</div>
+            <div class="entry-meta">
+              <ul>
+                <li>Docker</li>
+                <li>Git / GitHub</li>
+                <li>Kubernetes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Frontend</div>
+            <div class="entry-meta">
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Languages</div>
+            <div class="entry-meta">
+              <ul>
+                <li>Korean (Native)</li>
+                <li>English (<a href="https://drive.google.com/file/d/153VaGSEqk9APbcca-PxHYhbYWuTnXZZU/preview" target="_blank" rel="noreferrer">TOEIC 860</a>)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Education</h2>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">Bachelor's Degree in Computer Science</div>
+          <div class="entry-meta">Bachelor's Degree Examination for Self-Education</div>
+        </div>
+        <div class="entry-period">Dec 2022 ~ Aug 2024</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">Department of Rehabilitation Engineering (Completed 3rd Year, Withdrew)</div>
+          <div class="entry-meta">Daegu University · GPA 4.21 / 4.5</div>
+        </div>
+        <div class="entry-period">Mar 2018 ~ Feb 2020</div>
+      </div>
+    </section>
+
+    <footer>© 2026 Nahyun Kim · Last updated: May 2026</footer>
+  </body>
+</html>
