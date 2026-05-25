@@ -145,6 +145,15 @@
           width: auto;
           text-align: left;
         }
+        .header-link a {
+          color: #111;
+          text-decoration: none;
+          border-bottom: 1px solid #999;
+        }
+
+        .header-link a:hover {
+          border-bottom-color: #111;
+        }
       }
     </style>
   </head>
@@ -161,6 +170,11 @@
           <i class="fa-brands fa-github"></i>
           <a href="https://github.com/knh8412863" target="_blank" rel="noreferrer">knh8412863</a>
         </span>
+        |
+        <span class="header-link">
+          <i class="fa-solid fa-folder-open"></i>
+          <a href="portfolio.html" target="_blank" rel="noreferrer">Portfolio</a>
+        </span>
       </p>
     <nav>
       <a href="resume_kor.html">Korean Version</a>
@@ -171,14 +185,28 @@
       <h2>🗂️ Projects</h2>
       <div class="entry">
         <div class="entry-main">
+          <div class="entry-title">💪 Chronic Disease Lifestyle Challenge Web Service 💪</div>
+          <div class="entry-meta">
+            (In progress) AI healthcare prediction model · ML completed
+          </div>
+          <ul>
+            <li>Team Lead: Led overall project planning, requirements definition, API/database design, wireframing, modeling, and service integration direction</li>
+            <li>Designed prediction input, health record, challenge, and LLM advice domain APIs and database models for a FastAPI, AI Worker, MySQL, and Redis-based architecture</li>
+            <li>Achieved Macro F1 0.8608 with an XGBoost-based chronic disease prediction model and ROC-AUC 0.7911 for CKD risk classification</li>
+          </ul>
+        </div>
+        <div class="entry-period">May 2026 ~ Jun 2026</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
           <div class="entry-title">🧬 Fertility Treatment Success Prediction 🧬</div>
           <div class="entry-meta">
             Healthcare data classification model ·
             <a href="https://github.com/knh8412863/Fertility-Success-Predictor" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <ul>
+            <li>Team Lead: Led EDA, missing value handling, domain feature engineering, and LightGBM/CatBoost ensemble strategy</li>
             <li>Developed a classification model to predict pregnancy success using fertility treatment data</li>
-            <li>Led EDA, missing value handling, domain feature engineering, and LightGBM/CatBoost ensemble strategy</li>
             <li>Achieved Public AUC 0.7421 with a validation design focused on preventing data leakage</li>
           </ul>
         </div>
@@ -192,8 +220,8 @@
             <a href="https://github.com/knh8412863/BioMetric-Calorie-Predictor" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <ul>
+            <li>Team Lead: Led data preprocessing, CatBoost modeling, feature engineering, and cross-validation strategy</li>
             <li>Built a regression model to predict calorie expenditure using biometric indicators such as heart rate, body temperature, and BMI</li>
-            <li>Led data preprocessing, CatBoost modeling, feature engineering, and cross-validation strategy</li>
             <li>Achieved RMSE 0.47 and ranked near the top of the leaderboard</li>
           </ul>
         </div>
@@ -207,19 +235,19 @@
             <a href="https://github.com/knh8412863/Smoking-Health-Analysis" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <ul>
+            <li>Team Lead: Led hypothesis setting, data cleaning, and insight generation using t-tests and chi-square tests</li>
             <li>Analyzed correlations between smoking status and metabolic, blood, and oral health indicators using 7,000 health checkup records</li>
-            <li>Led hypothesis setting, data cleaning, and insight generation using t-tests and chi-square tests</li>
           </ul>
         </div>
         <div class="entry-period">Jan 2026</div>
       </div>
       <div class="entry">
         <div class="entry-main">
-          <div class="entry-title">🦾 3D-Printed EMG-Based Robotic Prosthetic Hand 🦾</div>
+          <div class="entry-title">🦾 3D-Printed Robotic Prosthetic Hand Prototype 🦾</div>
           <div class="entry-meta">Rehabilitation engineering hardware prototype</div>
           <ul>
-            <li>Built an electric prosthetic hand prototype using 3D printing, flex sensors, EMG sensors, and Arduino</li>
-            <li>Led hardware design, 3D printing, and servo motor control logic based on sensor signals</li>
+            <li>Team Lead: Managed the build schedule and led part assembly, post-processing of printed components, and project documentation</li>
+            <li>Built a robotic prosthetic hand prototype using CATIA/Cura-based 3D-printed parts, flex sensors, Arduino, and servo motors</li>
           </ul>
         </div>
         <div class="entry-period">Sep 2019 ~ Dec 2019</div>
@@ -240,7 +268,7 @@
             <li>Practiced team collaboration with Git/GitHub through mini projects and hackathons</li>
           </ul>
         </div>
-        <div class="entry-period">Dec 2025 ~ Present</div>
+        <div class="entry-period">Dec 2025 ~ Jun 2026</div>
       </div>
       <div class="entry">
         <div class="entry-main">
@@ -262,7 +290,7 @@
             <li>Self-studied C and AutoCAD to strengthen technical problem-solving skills</li>
             <li>Supported lab operations by managing research equipment, including 3D printers, and assisting with classes</li>
             <li>Assisted with experiment data measurement and recording to support research data integrity</li>
-            <li>Applied self-directed learning to a campus project building an EMG-based robotic prosthetic hand</li>
+            <li>Applied self-directed learning to a campus project building a 3D-printed robotic prosthetic hand prototype</li>
           </ul>
         </div>
         <div class="entry-period">Sep 2018 ~ Feb 2020</div>
@@ -302,7 +330,7 @@
             >
           </div>
         </div>
-        <div class="entry-period">Apr 2023 ~ Apr 2026</div>
+        <div class="entry-period">Apr 2023</div>
       </div>
       <div class="entry compact">
         <div class="entry-main">
@@ -354,7 +382,6 @@
               <ul>
                 <li>Docker</li>
                 <li>Git / GitHub</li>
-                <li>Kubernetes</li>
               </ul>
             </div>
           </div>

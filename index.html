@@ -79,7 +79,8 @@
         box-shadow: 0 10px 22px rgba(17, 17, 17, 0.12);
       }
 
-      .actions a:first-child {
+      .actions .portfolio-link {
+        grid-column: 1 / -1;
         color: #fff;
         background: #111;
       }
@@ -102,13 +103,14 @@
   </head>
   <body>
     <main>
-      <img class="profile" src="profile.png" alt="김나현 프로필 사진" />
+      <img class="profile" src="images/profile.png" alt="김나현 프로필 사진" />
       <h1>김나현 _ Nahyun Kim</h1>
-      <p>Backend / Infra Engineer</p>
+      <p>AI 헬스케어 Engineer</p>
 
       <div class="actions" aria-label="이력서 언어 선택">
         <a href="resume_kor.html"> 🇰🇷 한글 이력서</a>
         <a href="resume_eng.html"> 🇺🇸 English Resume</a>
+        <a class="portfolio-link" href="portfolio.html">Portfolio</a>
       </div>
     </main>
   </body>

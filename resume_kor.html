@@ -145,6 +145,15 @@
           width: auto;
           text-align: left;
         }
+        .header-link a {
+          color: #111;
+          text-decoration: none;
+          border-bottom: 1px solid #999;
+        }
+
+        .header-link a:hover {
+          border-bottom-color: #111;
+        }
       }
     </style>
   </head>
@@ -161,6 +170,11 @@
               <i class="fa-brands fa-github"></i>
               <a href="https://github.com/knh8412863" target="_blank" rel="noreferrer">knh8412863</a>
             </span>
+            |
+            <span class="header-link">
+              <i class="fa-solid fa-folder-open"></i>
+              <a href="portfolio.html" target="_blank" rel="noreferrer">포트폴리오</a>
+            </span>
           </p>
         <nav>
           <a href="resume_eng.html">English Version</a>
@@ -171,14 +185,28 @@
       <h2>🗂️ 프로젝트</h2>
       <div class="entry">
         <div class="entry-main">
+          <div class="entry-title">💪 만성질환 생활습관 챌린지 웹 서비스 💪</div>
+          <div class="entry-meta">
+            (진행 중) AI 헬스케어 예측 모델 · 모델링 완료
+          </div>
+          <ul>
+            <li>(팀장) 서비스 기획, 요구사항 정의, API/DB 설계, 와이어프레임, 모델링 및 서비스 연동 방향 수립 전반 주도</li>
+            <li>FastAPI·AI Worker·MySQL·Redis 기반 구조에 맞춰 예측 입력, 건강 기록, 챌린지, LLM 조언 도메인 API/DB 모델링 설계</li>
+            <li>XGBoost 기반 메인 만성질환 예측 모델 Macro F1 0.8608, CKD 위험군 분류 ROC-AUC 0.7911 달성</li>
+          </ul>
+        </div>
+        <div class="entry-period">2026.05 ~ 2026.06</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
           <div class="entry-title">🧬 난임 환자 대상 임신 성공 여부 예측 🧬</div>
           <div class="entry-meta">
             헬스케어 데이터 분류 모델 ·
             <a href="https://github.com/knh8412863/Fertility-Success-Predictor" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <ul>
-            <li>난임 시술 데이터를 활용해 임신 성공 여부를 예측하는 분류 모델 개발</li>
             <li>(팀장) EDA, 결측치 처리, 도메인 파생변수 설계, LightGBM/CatBoost 앙상블 전략 주도</li>
+            <li>난임 시술 데이터를 활용해 임신 성공 여부를 예측하는 분류 모델 개발</li>
             <li>데이터 누수를 방지한 검증 구조로 Public AUC 0.7421 달성</li>
           </ul>
         </div>
@@ -192,8 +220,8 @@
             <a href="https://github.com/knh8412863/BioMetric-Calorie-Predictor" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <ul>
-            <li>심박수, 체온, BMI 등 생체 지표 기반 칼로리 소모량 회귀 예측 모델 개발</li>
             <li>(팀장) 데이터 전처리, CatBoost 모델링, 파생변수 설계 및 교차 검증 전략 수립</li>
+            <li>심박수, 체온, BMI 등 생체 지표 기반 칼로리 소모량 회귀 예측 모델 개발</li>
             <li>RMSE 0.47 달성 및 리더보드 상위권 기록</li>
           </ul>
         </div>
@@ -207,19 +235,19 @@
             <a href="https://github.com/knh8412863/Smoking-Health-Analysis" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <ul>
-            <li>7,000건의 건강검진 데이터를 기반으로 흡연 여부와 대사·혈액·구강 지표 간 상관관계 분석</li>
             <li>(팀장) 가설 설정, 데이터 정제, T-test 및 카이제곱 검정 기반 인사이트 도출</li>
+            <li>7,000건의 건강검진 데이터를 기반으로 흡연 여부와 대사·혈액·구강 지표 간 상관관계 분석</li>
           </ul>
         </div>
         <div class="entry-period">2026.01</div>
       </div>
       <div class="entry">
         <div class="entry-main">
-          <div class="entry-title">🦾 3D 프린팅 기반 근전도 로봇 의수 🦾</div>
+          <div class="entry-title">🦾 3D 프린팅 기반 로봇 의수 프로토타입 🦾</div>
           <div class="entry-meta">재활공학 하드웨어 프로토타입</div>
           <ul>
-            <li>3D 프린팅, Flex 센서, 근전도 센서, Arduino를 활용한 전동 로봇 의수 프로토타입 제작</li>
-            <li>(팀장) 하드웨어 설계, 3D 프린팅, 센서 신호 기반 서보모터 제어 로직 구현 담당</li>
+            <li>(팀장) 제작 일정 관리, 부품 조립, 출력물 후가공, 제작 과정 문서화 주도</li>
+            <li>CATIA/Cura 기반 3D 프린팅 부품과 Flex 센서, Arduino, 서보모터를 활용한 로봇 의수 프로토타입 제작</li>
           </ul>
         </div>
         <div class="entry-period">2019.09 ~ 2019.12</div>
@@ -241,7 +269,7 @@
             <li>실무 중심의 미니 프로젝트와 해커톤 참여를 통해 데이터 기반 예측 모델 구현 및 Git/GitHub 기반의 팀 협업 워크플로우 숙달</li>
           </ul>
         </div>
-        <div class="entry-period">2025.12 ~</div>
+        <div class="entry-period">2025.12 ~ 2026.06</div>
       </div>
       <div class="entry">
         <div class="entry-main">
@@ -263,7 +291,7 @@
             <li>자기주도적 기술 습득: C언어 및 AutoCAD를 추가 학습하여 기술적 문제 해결 역량 배양</li>
             <li>연구실 운영 지원: 연구실 인프라(3D 프린터 등 장비) 및 비품 관리와 교수님 수업 보조를 전담하며 원활한 연구/교육 환경 조성에 기여</li>
             <li>데이터 관리 보조: 실험 데이터 측정 및 기록 보조 업무를 수행하며 데이터의 무결성과 연구 프로세스 전반에 대한 이해도 제고</li>
-            <li>교내 프로젝트 참여: 연구실 내 자습을 통해 쌓은 역량을 바탕으로 '근전도 기반 로봇 의수 제작' 대회에 참여하여 실무 적용 경험 보유</li>
+            <li>교내 프로젝트 참여: 연구실 내 자습을 통해 쌓은 역량을 바탕으로 '3D 프린팅 기반 로봇 의수 제작' 프로젝트에 참여하여 하드웨어 프로토타입 제작 경험 보유</li>
          </ul>
         </div>
         <div class="entry-period">2018.09 ~ 2020.02</div>
@@ -303,7 +331,7 @@
             >
           </div>
         </div>
-        <div class="entry-period">2023.04 ~ 2026.04</div>
+        <div class="entry-period">2023.04</div>
       </div>
       <div class="entry compact">
         <div class="entry-main">
@@ -355,7 +383,6 @@
               <ul>
                 <li>Docker</li>
                 <li>Git / GitHub</li>
-                <li>Kubernetes</li>
               </ul>
             </div>
           </div>
