@@ -100,6 +100,27 @@
         border-bottom-color: #111;
       }
 
+      .toc a.active {
+        color: #111;
+        border-bottom-color: #111;
+      }
+
+      .toc a::before {
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        margin-right: 9px;
+        border-radius: 50%;
+        background: #111;
+        vertical-align: middle;
+        visibility: hidden;
+      }
+
+      .toc a.active::before {
+        visibility: visible;
+      }
+
       main {
         min-width: 0;
       }
@@ -1185,5 +1206,48 @@
         </section>
       </main>
     </div>
+    <script>
+      const tocLinks = Array.from(document.querySelectorAll('.toc a'));
+      const slideGroups = {
+        intro: 'intro',
+        chronic: 'chronic',
+        fertility: 'fertility-summary',
+        calorie: 'calorie-summary',
+        smoking: 'smoking',
+        prosthetic: 'prosthetic',
+        links: 'links'
+      };
+
+      function menuTargetForSlide(id) {
+        const key = Object.keys(slideGroups).find((group) => id === group || id.startsWith(`${group}-`));
+        return key ? slideGroups[key] : null;
+      }
+
+      function activateMenu(targetId) {
+        tocLinks.forEach((link) => {
+          const active = link.getAttribute('href') === `#${targetId}`;
+          link.classList.toggle('active', active);
+          if (active) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const targetId = menuTargetForSlide(entry.target.id);
+            if (targetId) activateMenu(targetId);
+          });
+        },
+        { rootMargin: '-40% 0px -45% 0px' }
+      );
+
+      document.querySelectorAll('.slide[id]').forEach((slide) => observer.observe(slide));
+      activateMenu(menuTargetForSlide(location.hash.slice(1)) || 'intro');
+    </script>
   </body>
 </html>
