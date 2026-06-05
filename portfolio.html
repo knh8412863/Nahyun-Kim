@@ -315,12 +315,12 @@
       }
 
       .chronic-overview h3 {
-        font-size: clamp(1.8rem, 2.7vw, 2.7rem);
-        white-space: nowrap;
+        font-size: clamp(1.75rem, 2.35vw, 2.35rem);
+        line-height: 1.22;
       }
 
       .chronic-overview .meta-panel {
-        margin-top: 110px;
+        margin-top: 42px;
         padding: 14px;
         gap: 10px;
       }
@@ -338,37 +338,17 @@
         padding: 14px 16px;
       }
 
-      .chronic-service-layout,
-      .chronic-planning-layout,
-      .chronic-next-layout {
+      .chronic-service-layout {
         display: grid;
         gap: 26px;
       }
 
-      .chronic-service-layout .compact-copy,
-      .chronic-next-layout .compact-copy {
+      .chronic-service-layout .compact-copy {
         max-width: 1040px;
       }
 
       .chronic-service-layout .image-card img {
         aspect-ratio: 16 / 10;
-      }
-
-      .planning-top {
-        display: grid;
-        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-        gap: 28px;
-        align-items: end;
-      }
-
-      .planning-top .image-card {
-        margin-top: 104px;
-      }
-
-      .planning-top .image-card img {
-        aspect-ratio: 16 / 8.3;
-        object-fit: cover;
-        object-position: center 58%;
       }
 
       .image-card figcaption {
@@ -393,6 +373,24 @@
 
       .image-row.three {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .image-row.featured {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .image-row.featured .wide {
+        grid-column: 1 / -1;
+      }
+
+      .image-row.featured .wide img {
+        aspect-ratio: 16 / 7;
+        object-fit: contain;
+      }
+
+      .image-row.featured .diagram-strip img {
+        aspect-ratio: 20 / 1;
+        object-fit: contain;
       }
 
       .pill-row {
@@ -532,8 +530,7 @@
 
         .intro-grid,
         .project-grid,
-        .visual-grid,
-        .planning-top {
+        .visual-grid {
           grid-template-columns: 1fr;
           gap: 28px;
         }
@@ -631,16 +628,18 @@
         <section class="slide" id="intro">
           <div class="slide-content intro-grid">
             <div>
-              <p class="eyebrow">AI Engineer Portfolio</p>
-              <h3>데이터를 모델과 서비스로 연결하는 개발자</h3>
+              <p class="eyebrow">AI Engineer</p>
+              <h3>데이터 기반 문제 정의부터
+                <br>AI 모델링과 서비스 구현까지 연결하는 개발자</h3>
               <p class="lead">
-                다양한 데이터를 바탕으로 문제를 정의하고, 
-                <br>모델링부터 검증, API 및 서비스 흐름 설계까지 연결하는 AI 엔지니어를 지향합니다.
+                건강 데이터, 생활습관 데이터, 공공 데이터를 활용해 문제를 정의하고,
+                <br>전처리·모델링·검증·API/DB 설계·서비스 흐름까지 연결하는 프로젝트를 수행했습니다.
+                <br>모델 결과가 실제 사용자 경험 안에서 신뢰할 수 있게 작동하는 AI 서비스를 만드는 것을 목표로 합니다.
               </p>
               <div class="pill-row">
                 <span class="pill">Python</span>
                 <span class="pill">Machine Learning</span>
-                <span class="pill">Data Analysis</span>
+                <span class="pill">React</span>
                 <span class="pill">FastAPI</span>
                 <span class="pill">SQL</span>
                 <span class="pill">Docker</span>
@@ -649,15 +648,15 @@
             <div class="summary">
               <div>
                 <strong>Focus</strong>
-                <span>AI 모델링, 데이터 분석, 서비스 연동 구조 설계</span>
+                <span>데이터 기반 문제 정의, AI 모델링, 서비스 연동</span>
               </div>
               <div>
                 <strong>Strength</strong>
-                <span>문제 정의부터 검증, API/DB 설계까지 연결하는 프로젝트 경험</span>
+                <span>전처리·검증·API/DB 설계까지 연결하는 엔드투엔드 프로젝트 경험</span>
               </div>
               <div>
                 <strong>Goal</strong>
-                <span>신뢰할 수 있는 AI 기능을 실제 서비스 안에 구현하는 엔지니어</span>
+                <span>모델 결과를 실제 서비스 가치로 전환하는 AI 엔지니어</span>
               </div>
             </div>
           </div>
@@ -668,133 +667,126 @@
             <div>
               <span class="status">In progress · ML Completed</span>
               <div class="title-row">
-                <h3>만성질환 생활습관 챌린지 웹 서비스</h3>
+                <h3>AI 기반 만성질환 생활습관 관리 서비스</h3>
               </div>
               <p class="lead">
-                만성질환 예측 모델과 생활습관 챌린지를 연결하는 헬스케어 웹 서비스를 개발 중입니다.
-                모델링 작업은 완료했고, 현재는 서비스 연동 구조를 구체화하고 있습니다.
+                건강 설문과 생활습관 데이터를 기반으로 당뇨, 고혈압, 만성신장질환 위험도를 예측하고
+                <br>건강 조언·챌린지·리포트·가상 펫 기능으로 지속적인 건강 관리를 돕는 AI 헬스케어 웹 서비스입니다.
               </p>
               <ul>
-                <li>(팀장) 서비스 기획, 요구사항 정의, API/DB 설계, 와이어프레임, 모델링 및 서비스 연동 방향 수립 전반 주도</li>
-                <li>FastAPI, AI Worker, MySQL, Redis 기반 구조에 맞춰 도메인 API와 DB 모델링 설계</li>
-                <li>당뇨, 고혈압, 고지혈증, 비만 멀티라벨 예측 모델 및 CKD 위험군 분류 모델 개발</li>
-                <li>모델링 결과를 서비스 흐름으로 연결하기 위해 예측 입력, 건강 기록, 챌린지, LLM 조언 도메인으로 분리</li>
+                <li>(팀장) 서비스 기획, 요구사항 정의, API/DB 설계, 와이어프레임 작성, GitHub 협업 흐름 주도</li>
+                <li>FastAPI, Tortoise ORM, MySQL, Redis 기반 백엔드 구조 설계</li>
+                <li>React/TypeScript 프론트엔드와 예측·피드백·대시보드 흐름 연동</li>
+                <li>AI Worker를 분리해 모델 추론과 서비스 API를 연결하는 구조 구성</li>
               </ul>
             </div>
             <aside class="meta-panel">
               <div>
                 <strong>Role</strong>
-                <span>팀장 · 기획/요구사항/API·DB/와이어프레임/모델링 방향 주도</span>
+                <span>팀장 · AI 예측 파이프라인 · 백엔드 API 설계 및 구현 · 서비스 기획</span>
               </div>
               <div>
-                <strong>ML Result</strong>
-                <span>Macro F1 0.8608, CKD ROC-AUC 0.7911</span>
+                <strong>Scope</strong>
+                <span>기획, API/DB, 와이어프레임, 모델 추론 연동 구조</span>
               </div>
               <div>
-                <strong>Architecture</strong>
-                <span>FastAPI, AI Worker, MySQL, Redis</span>
-              </div>
-              <div>
-                <strong>Next Step</strong>
-                <span>모델 서빙 구조, API 검증, 서비스 운영 흐름 구체화</span>
+                <strong>Stack</strong>
+                <span>FastAPI, React, TypeScript, MySQL, Redis, AI Worker</span>
               </div>
             </aside>
+          </div>
+        </section>
+
+        <section class="slide" id="chronic-architecture">
+          <div class="slide-content chronic-service-layout">
+            <div class="compact-copy">
+              <p class="eyebrow">Project 01 · Architecture & Planning</p>
+              <h3>서비스 기획을 API와 DB 구조로 구체화</h3>
+              <p class="lead">
+                기능 요구사항을 인증, 건강 설문, 예측, 피드백, 챌린지, 리포트 도메인으로 나누고
+                <br>프론트엔드, FastAPI 백엔드, AI Worker, MySQL, Redis가 연결되는 실행 구조를 설계했습니다.
+              </p>
+              <ul>
+                <li>요구사항 정의서와 API 명세서를 작성해 사용자 흐름을 엔드포인트 단위로 정리</li>
+                <li>모델 버전, 학습 데이터, 예측 결과, 예측 피드백 테이블을 분리해 추적성과 확장성 고려</li>
+                <li>Docker Compose 기반 실행 환경에서 Nginx, FastAPI, AI Worker, MySQL, Redis 흐름 구성</li>
+              </ul>
+            </div>
+            <div class="image-row featured">
+              <figure class="image-card">
+                <img src="images/chronic_disease/소프트웨어 아키텍처 다이어그램.png" alt="All4Health 소프트웨어 아키텍처 다이어그램" />
+                <figcaption>서비스 아키텍처: Frontend, FastAPI, AI Worker, MySQL, Redis</figcaption>
+              </figure>
+              
+              <figure class="image-card">
+                <img src="images/chronic_disease/API명세서 일부.png" alt="All4Health API 명세서 일부" />
+                <figcaption>API 명세: 인증, 대시보드, 챌린지 엔드포인트</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" id="chronic-pipeline">
+          <div class="slide-content chronic-service-layout">
+            <div class="compact-copy">
+              <p class="eyebrow">Project 01 · AI Pipeline</p>
+              <h3>KNHANES 기반 만성질환 예측 모델 파이프라인</h3>
+              <p class="lead">
+                KNHANES 원천 데이터를 정제하고 표준 변수명 매핑, 결측치 처리, 파생변수 생성,
+                질환별 누수 피처 제거를 수행한 뒤 <br>XGBoost, LightGBM, HistGradientBoosting 모델을 학습했습니다.
+              </p>
+              <ul>
+                <li>eGFR, UACR, WHtR, TG/HDL ratio, 가족력 점수 등 파생변수 생성</li>
+                <li>질환별 라벨 누수 피처 제거 로직 구성 및 모델 artifact 저장</li>
+                <li>Screening/Diagnostic threshold와 calibrator를 분리해 예측 목적별 판단 기준 구성</li>
+              </ul>
+            </div>
+            <div class="image-row featured">
+              <figure class="image-card wide diagram-strip">
+                <img src="images/chronic_disease/AI 모델 파이프라인 다이어그램.png" alt="KNHANES 기반 AI 모델 파이프라인 다이어그램" />
+                <figcaption>AI 모델 파이프라인: 데이터 정제부터 서비스 추론까지</figcaption>
+              </figure>
+              <figure class="image-card">
+                <img src="images/chronic_disease/thresholds.json화면 캡쳐.png" alt="thresholds.json 화면 캡처" />
+                <figcaption>threshold 관리: screening/diagnostic 기준 분리</figcaption>
+              </figure>
+              <figure class="image-card">
+                <img src="images/chronic_disease/예측 결과 화면.png" alt="만성질환 예측 결과 화면" />
+                <figcaption>예측 결과: 질환별 위험도와 건강관리 권고</figcaption>
+              </figure>
+            </div>
+            
           </div>
         </section>
 
         <section class="slide" id="chronic-service">
           <div class="slide-content chronic-service-layout">
             <div class="compact-copy">
-              <p class="eyebrow">Project 01 · Service Flow</p>
-              <h3>예측 결과를 사용자 행동으로 연결하는 화면 설계</h3>
+              <p class="eyebrow">Project 01 · Full-stack Service Flow</p>
+              <h3>예측 결과부터 건강관리 행동까지 연결한 서비스 흐름</h3>
               <p class="lead">
-                모델 결과가 단순 점수로 끝나지 않도록, 대시보드에서 건강 점수, 최근 예측 결과,
-                AI 조언, 챌린지를 함께 확인하는 흐름으로 와이어프레임을 설계했습니다.
+                사용자가 건강 설문을 입력하면 백엔드가 건강 입력값과 생활습관 데이터를 저장하고,
+                <br>AI Worker를 통해 예측한 결과를 대시보드, 피드백, 건강 조언, 챌린지, 리포트 흐름과 연결합니다.
               </p>
               <ul>
-                <li>홈 화면에서 만성질환 위험도와 건강 점수를 함께 노출해 사용자가 현재 상태를 빠르게 파악하도록 구성</li>
-                <li>예측 결과 화면은 질환별 위험도, 주요 위험 요인, 개선 권고 사항을 분리해 보여주는 구조로 설계</li>
-                <li>모델 결과가 생활습관 챌린지와 이어지도록 대시보드 안에 진행 중 챌린지와 빠른 기록 기능을 배치</li>
+                <li>회원가입, 이메일 인증, JWT 인증, 건강 설문 온보딩 흐름 구성</li>
+                <li>건강기록, 예측 요청, 예측 결과, 예측 피드백 API 흐름 구현</li>
+                <li>조언, 챌린지, 가상 펫, 리포트, 알림 기능을 건강관리 행동 유도 모듈로 분리</li>
               </ul>
             </div>
             <div class="image-row three">
               <figure class="image-card">
-                <img src="images/chronic_disease/홈 대시보드.png" alt="만성질환 생활습관 챌린지 홈 대시보드 와이어프레임" />
-                <figcaption>홈 대시보드: 건강 점수, 예측 결과, AI 조언, 챌린지 흐름</figcaption>
+                <img src="images/chronic_disease/건강 설문 입력 화면.png" alt="건강 설문 입력 화면" />
+                <figcaption>건강 설문: 예측 입력값과 생활습관 데이터 수집</figcaption>
               </figure>
               <figure class="image-card">
-                <img src="images/chronic_disease/예측결과.png" alt="만성질환 예측 결과 와이어프레임" />
-                <figcaption>예측 결과: 질환별 위험도와 개선 권고 사항</figcaption>
+                <img src="images/chronic_disease/예측 이력 화면.png" alt="예측 이력 화면" />
+                <figcaption>예측 이력: 질환별 결과와 이전 예측 기록 확인</figcaption>
               </figure>
               <figure class="image-card">
-                <img src="images/chronic_disease/챌린지상세.png" alt="만성질환 생활습관 챌린지 상세 와이어프레임" />
-                <figcaption>챌린지 요약: 진행률, 오늘의 미션, 성과 확인</figcaption>
+                <img src="images/chronic_disease/예측 피드백 화면.png" alt="예측 피드백 화면" />
+                <figcaption>예측 피드백: 사용자 피드백을 모델 개선 데이터로 연결</figcaption>
               </figure>
-            </div>
-          </div>
-        </section>
-
-        <section class="slide" id="chronic-planning">
-          <div class="slide-content chronic-planning-layout">
-            <div class="planning-top">
-              <div class="compact-copy">
-                <p class="eyebrow">Project 01 · Planning & Architecture</p>
-                <h3>기획 문서를 API와 DB 구조로 구체화</h3>
-                <p class="lead">
-                  서비스 요구사항을 기능 단위로 정리하고, 대시보드·예측·챌린지 흐름이
-                  실제 API와 데이터 모델로 연결될 수 있도록 설계 산출물을 작성했습니다.
-                </p>
-                <ul>
-                  <li>요구사항 정의서에서 대시보드, 예측, 챌린지 기능을 사용자 행동 기준으로 분리</li>
-                  <li>API 명세서에 인증, 대시보드, 챌린지 조회 흐름을 엔드포인트 단위로 정리</li>
-                  <li>모델 버전, 학습 데이터, 예측 피드백 테이블을 분리해 예측 결과의 추적성과 확장성을 고려</li>
-                </ul>
-              </div>
-              <figure class="image-card">
-                <img src="images/chronic_disease/ERD 일부.png" alt="만성질환 생활습관 챌린지 ERD 일부" />
-                <figcaption>ERD: 모델 버전, 학습 데이터, 예측 피드백 중심 구조</figcaption>
-              </figure>
-            </div>
-            <div class="image-row">
-              <figure class="image-card document">
-                <img src="images/chronic_disease/요구사항정의서 일부.png" alt="만성질환 생활습관 챌린지 요구사항 정의서 일부" />
-                <figcaption>요구사항 정의: 대시보드와 챌린지 기능 상세</figcaption>
-              </figure>
-              <figure class="image-card document">
-                <img src="images/chronic_disease/API명세서 일부.png" alt="만성질환 생활습관 챌린지 API 명세서 일부" />
-                <figcaption>API 명세: 대시보드와 챌린지 엔드포인트</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        <section class="slide" id="chronic-challenge">
-          <div class="slide-content chronic-next-layout">
-            <div class="compact-copy">
-              <p class="eyebrow">Project 01 · Next Step</p>
-              <h3>모델 결과를 안정적인 서비스 기능으로 연결하기</h3>
-              <p class="lead">
-                현재 모델링과 주요 설계 산출물을 마친 상태이며, 다음 단계에서는 예측 요청부터
-                결과 저장, 챌린지 추천, 사용자 피드백 수집까지 이어지는 운영 흐름을 구현할 예정입니다.
-              </p>
-            </div>
-            <div class="project-summary">
-              <div>
-                <strong>Model Serving</strong>
-                <span>질환별 모델 버전과 threshold를 관리하고 예측 결과를 DB에 저장하는 흐름 구현</span>
-              </div>
-              <div>
-                <strong>API Integration</strong>
-                <span>FastAPI 엔드포인트와 AI Worker를 연결해 예측 요청/응답 구조 검증</span>
-              </div>
-              <div>
-                <strong>Personalization</strong>
-                <span>예측 위험도와 생활습관 기록을 기반으로 챌린지 추천 로직 확장</span>
-              </div>
-              <div>
-                <strong>Validation</strong>
-                <span>사용자 피드백과 실제 진단 정보를 분리 저장해 모델 개선 데이터로 활용</span>
-              </div>
             </div>
           </div>
         </section>

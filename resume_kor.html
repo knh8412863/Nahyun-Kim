@@ -204,9 +204,10 @@
             (진행 중) AI 헬스케어 예측 모델 · 모델링 완료
           </div>
           <ul>
-            <li>(팀장) 서비스 기획, 요구사항 정의, API/DB 설계, 와이어프레임, 모델링 및 서비스 연동 방향 수립 전반 주도</li>
-            <li>FastAPI·AI Worker·MySQL·Redis 기반 구조에 맞춰 예측 입력, 건강 기록, 챌린지, LLM 조언 도메인 API/DB 모델링 설계</li>
-            <li>XGBoost 기반 메인 만성질환 예측 모델 Macro F1 0.8608, CKD 위험군 분류 ROC-AUC 0.7911 달성</li>
+            <li>(팀장) 서비스 기획, 요구사항 정의, API/DB 설계, 와이어프레임 작성, GitHub 협업 흐름 전반 주도</li>
+            <li>FastAPI, Tortoise ORM, MySQL, Redis 기반 백엔드와 React/TypeScript 프론트엔드의 예측 요청, 결과, 피드백 흐름 설계 및 구현</li>
+            <li>AI Worker에서 KNHANES 기반 전처리, 파생변수 생성, 누수 피처 제거, 모델 artifact/threshold 기반 추론 파이프라인 구성</li>
+            <li>XGBoost/LGBM 기반 모델로 당뇨 ROC-AUC 0.85, 고혈압 ROC-AUC 0.7754, 만성신장질환 ROC-AUC 0.957 달성</li>
           </ul>
         </div>
         <div class="entry-period">2026.05 ~ 2026.06</div>
@@ -380,9 +381,8 @@
             <div class="entry-meta">
               <ul>
                 <li>Python</li>
-                <li>Pandas / NumPy</li>
-                <li>Scikit-learn</li>
-                <li>XGBoost / LightGBM / CatBoost</li>
+                <li>pandas / NumPy</li>
+                <li>scikit-learn</li>
                 <li>Matplotlib / Seaborn</li>
                 <li>Jupyter Notebook</li>
               </ul>
@@ -397,19 +397,23 @@
                 <li>Java</li>
                 <li>C</li>
                 <li>FastAPI</li>
+                <li>Tortoise ORM</li>
+                <li>Pydantic</li>
                 <li>PyMongo</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="entry no-period">
           <div class="entry-main">
-            <div class="entry-title">DevOps</div>
+            <div class="entry-title">Database / Infra</div>
             <div class="entry-meta">
               <ul>
-                <li>Docker</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>Nginx</li>
+                <li>Docker / Docker Compose</li>
                 <li>Git / GitHub</li>
               </ul>
             </div>
@@ -420,6 +424,9 @@
             <div class="entry-title">Frontend</div>
             <div class="entry-meta">
               <ul>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Vite</li>
                 <li>JavaScript</li>
                 <li>HTML/CSS</li>
               </ul>
@@ -459,6 +466,6 @@
     </section>
 
 
-    <footer>© 2026 김나현 · 마지막 업데이트: 2026년 5월</footer>
+    <footer>© 2026 김나현 · 마지막 업데이트: 2026년 6월</footer>
   </body>
 </html>
