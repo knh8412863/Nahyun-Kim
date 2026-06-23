@@ -284,6 +284,9 @@
       }
 
       .image-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         margin: 0;
         border: 1px solid #d3d8df;
         border-radius: 8px;
@@ -299,14 +302,19 @@
         height: auto;
         object-fit: contain;
         background: #fff;
+        cursor: zoom-in;
       }
 
       .image-card.tall img {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 16 / 9;
+      }
+
+      .image-card.sequence img {
+        aspect-ratio: 16 / 9;
       }
 
       .image-card.document img {
-        aspect-ratio: 16 / 7;
+        aspect-ratio: 16 / 9;
       }
 
       .chronic-overview {
@@ -327,7 +335,7 @@
 
       .chronic-overview .title-row {
         gap: 10px;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
       }
 
       .chronic-overview .title-row .project-link {
@@ -348,10 +356,13 @@
       }
 
       .chronic-service-layout .image-card img {
-        aspect-ratio: 16 / 10;
+        aspect-ratio: 16 / 9;
       }
 
       .image-card figcaption {
+        min-height: 52px;
+        display: flex;
+        align-items: center;
         padding: 10px 14px;
         color: #525b67;
         font-size: 0.84rem;
@@ -373,23 +384,43 @@
 
       .image-row.three {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      .image-row.three .image-card {
+        min-width: 0;
+      }
+
+      .image-row.three .image-card img {
+        height: clamp(150px, 13vw, 190px);
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+      }
+
+      .image-row.three .image-card figcaption {
+        min-height: 76px;
+        align-items: flex-start;
+        padding: 14px 18px;
+        font-size: 0.94rem;
+        line-height: 1.48;
       }
 
       .image-row.featured {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       }
 
       .image-row.featured .wide {
-        grid-column: 1 / -1;
+        grid-column: auto;
       }
 
       .image-row.featured .wide img {
-        aspect-ratio: 16 / 7;
+        aspect-ratio: 16 / 9;
         object-fit: contain;
       }
 
       .image-row.featured .diagram-strip img {
-        aspect-ratio: 20 / 1;
+        aspect-ratio: 16 / 9;
         object-fit: contain;
       }
 
@@ -487,6 +518,67 @@
         color: #fff;
       }
 
+      .image-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 28px;
+        background: rgba(17, 17, 17, 0.86);
+      }
+
+      .image-lightbox.is-open {
+        display: flex;
+      }
+
+      .image-lightbox__figure {
+        width: min(96vw, 1280px);
+        max-height: 92vh;
+        margin: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .image-lightbox__image {
+        display: block;
+        max-width: 100%;
+        max-height: 84vh;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      }
+
+      .image-lightbox__caption {
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .image-lightbox__close {
+        position: fixed;
+        top: 18px;
+        right: 22px;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-size: 1.35rem;
+        cursor: pointer;
+      }
+
+      .image-lightbox__close:hover {
+        background: #fff;
+        color: #111;
+      }
+
       @media (max-width: 860px) {
         .layout {
           display: block;
@@ -567,6 +659,14 @@
 
         .project-summary {
           grid-template-columns: 1fr;
+        }
+
+        .image-lightbox {
+          padding: 16px;
+        }
+
+        .image-lightbox__image {
+          max-height: 78vh;
         }
       }
 
@@ -665,33 +765,38 @@
         <section class="slide" id="chronic">
           <div class="slide-content project-grid chronic-overview">
             <div>
-              <span class="status">In progress · ML Completed</span>
+              <span class="status">배포 완료</span>
               <div class="title-row">
                 <h3>AI 기반 만성질환 생활습관 관리 서비스</h3>
+                <a class="project-link" href="https://github.com/knh8412863/Chronic-Life-Challenge" target="_blank" rel="noreferrer">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
               </div>
               <p class="lead">
-                건강 설문과 생활습관 데이터를 기반으로 당뇨, 고혈압, 만성신장질환 위험도를 예측하고
-                <br>건강 조언·챌린지·리포트·가상 펫 기능으로 지속적인 건강 관리를 돕는 AI 헬스케어 웹 서비스입니다.
+                All4Health는 만성질환 관리가 필요한 사용자가 건강 수치와 생활습관을 기록하고,
+                AI 질환 예측 결과를 바탕으로 건강 조언, 챌린지, 보상 시스템을 통해 지속적인 행동 개선을 유도하는 웹 서비스입니다.
+                저는 팀장으로서 서비스 기획과 요구사항 정의부터 API/DB 설계, 예측 모델 파이프라인, 백엔드/프론트엔드 연동,
+                배포 및 검증까지 전체 흐름을 주도했습니다.
               </p>
               <ul>
-                <li>(팀장) 서비스 기획, 요구사항 정의, API/DB 설계, 와이어프레임 작성, GitHub 협업 흐름 주도</li>
-                <li>FastAPI, Tortoise ORM, MySQL, Redis 기반 백엔드 구조 설계</li>
-                <li>React/TypeScript 프론트엔드와 예측·피드백·대시보드 흐름 연동</li>
-                <li>AI Worker를 분리해 모델 추론과 서비스 API를 연결하는 구조 구성</li>
+                <li>만성질환 관리를 단순 예측 결과 제공이 아니라 기록, 위험도 확인, 챌린지, 보상으로 이어지는 반복 행동 흐름으로 설계</li>
+                <li>GitHub Issues, 브랜치 전략, PR 리뷰, 커밋 컨벤션을 활용해 기능 단위 협업과 작업 추적 흐름을 정리</li>
+                <li>FastAPI/React 기반으로 건강 기록, AI 질환 예측, 맞춤 조언, 챌린지, 펫 보상 기능을 통합 구현</li>
+                <li>별도 AI Worker와 PredictionTask 기반 비동기 추론 구조로 일반 API 응답 흐름과 모델 추론 작업을 분리</li>
               </ul>
             </div>
             <aside class="meta-panel">
               <div>
                 <strong>Role</strong>
-                <span>팀장 · AI 예측 파이프라인 · 백엔드 API 설계 및 구현 · 서비스 기획</span>
+                <span>팀장 · 서비스 기획 · GitHub 협업 리딩 · AI 예측 파이프라인 · 백엔드 API 설계 및 구현</span>
               </div>
               <div>
                 <strong>Scope</strong>
-                <span>기획, API/DB, 와이어프레임, 모델 추론 연동 구조</span>
+                <span>기획, API/DB, 와이어프레임, 모델 추론 연동, 배포 및 검증</span>
               </div>
               <div>
                 <strong>Stack</strong>
-                <span>FastAPI, React, TypeScript, MySQL, Redis, AI Worker</span>
+                <span>FastAPI, React, TypeScript, MySQL, Redis, Docker, Nginx, AI Worker</span>
               </div>
             </aside>
           </div>
@@ -703,18 +808,19 @@
               <p class="eyebrow">Project 01 · Architecture & Planning</p>
               <h3>서비스 기획을 API와 DB 구조로 구체화</h3>
               <p class="lead">
-                기능 요구사항을 인증, 건강 설문, 예측, 피드백, 챌린지, 리포트 도메인으로 나누고
-                <br>프론트엔드, FastAPI 백엔드, AI Worker, MySQL, Redis가 연결되는 실행 구조를 설계했습니다.
+                기능 요구사항을 인증, 건강 기록, 예측, 피드백, 조언, 챌린지, 리포트 도메인으로 나누고
+                프론트엔드, FastAPI 백엔드, AI Worker, MySQL, Redis가 연결되는 실행 구조를 설계했습니다.
               </p>
               <ul>
                 <li>요구사항 정의서와 API 명세서를 작성해 사용자 흐름을 엔드포인트 단위로 정리</li>
                 <li>모델 버전, 학습 데이터, 예측 결과, 예측 피드백 테이블을 분리해 추적성과 확장성 고려</li>
+                <li>GitHub Issues와 PR 기반으로 기능 단위 작업을 나누고, 팀원 구현 범위와 리뷰 흐름을 관리</li>
                 <li>Docker Compose 기반 실행 환경에서 Nginx, FastAPI, AI Worker, MySQL, Redis 흐름 구성</li>
               </ul>
             </div>
             <div class="image-row featured">
               <figure class="image-card">
-                <img src="images/chronic_disease/소프트웨어 아키텍처 다이어그램.png" alt="All4Health 소프트웨어 아키텍처 다이어그램" />
+                <img src="images/chronic_disease/아키텍처 다이어그램.png" alt="All4Health 시스템 구성 아키텍처 다이어그램" />
                 <figcaption>서비스 아키텍처: Frontend, FastAPI, AI Worker, MySQL, Redis</figcaption>
               </figure>
               
@@ -733,22 +839,24 @@
               <h3>KNHANES 기반 만성질환 예측 모델 파이프라인</h3>
               <p class="lead">
                 KNHANES 원천 데이터를 정제하고 표준 변수명 매핑, 결측치 처리, 파생변수 생성,
-                질환별 누수 피처 제거를 수행한 뒤 <br>XGBoost, LightGBM, HistGradientBoosting 모델을 학습했습니다.
+                질환별 누수 피처 제거를 수행한 뒤 XGBoost, LightGBM, HistGradientBoosting 모델을 학습했습니다.
+                예측 요청은 API 서버에서 즉시 실행하지 않고 PredictionTask로 저장하며, 별도 AI Worker가 대기 작업을 처리하도록 설계했습니다.
               </p>
               <ul>
                 <li>eGFR, UACR, WHtR, TG/HDL ratio, 가족력 점수 등 파생변수 생성</li>
-                <li>질환별 라벨 누수 피처 제거 로직 구성 및 모델 artifact 저장</li>
-                <li>Screening/Diagnostic threshold와 calibrator를 분리해 예측 목적별 판단 기준 구성</li>
+                <li>정답에 직접 연결될 수 있는 질환별 라벨 누수 피처 제거 로직 구성 및 모델 artifact 저장</li>
+                <li>저장된 feature 순서, median, calibrator, threshold를 고정해 동일 입력 결과 편차 최소화</li>
+                <li>Screening threshold를 기본으로 사용해 건강관리 서비스에서 위험 신호를 놓치지 않는 방향으로 설계</li>
               </ul>
             </div>
             <div class="image-row featured">
-              <figure class="image-card wide diagram-strip">
-                <img src="images/chronic_disease/AI 모델 파이프라인 다이어그램.png" alt="KNHANES 기반 AI 모델 파이프라인 다이어그램" />
-                <figcaption>AI 모델 파이프라인: 데이터 정제부터 서비스 추론까지</figcaption>
+              <figure class="image-card wide sequence">
+                <img src="images/chronic_disease/AI 추론 아키텍처 다이어그램.png" alt="All4Health AI 추론 아키텍처 다이어그램" />
+                <figcaption>AI 추론 아키텍처: PredictionTask 생성, AI Worker 처리, 결과 저장 및 조회</figcaption>
               </figure>
               <figure class="image-card">
-                <img src="images/chronic_disease/thresholds.json화면 캡쳐.png" alt="thresholds.json 화면 캡처" />
-                <figcaption>threshold 관리: screening/diagnostic 기준 분리</figcaption>
+                <img src="images/chronic_disease/AI 모델 파이프라인 다이어그램.png" alt="KNHANES 기반 AI 모델 파이프라인 다이어그램" />
+                <figcaption>AI 모델 파이프라인: 데이터 정제부터 서비스 추론까지</figcaption>
               </figure>
               <figure class="image-card">
                 <img src="images/chronic_disease/예측 결과 화면.png" alt="만성질환 예측 결과 화면" />
@@ -765,27 +873,28 @@
               <p class="eyebrow">Project 01 · Full-stack Service Flow</p>
               <h3>예측 결과부터 건강관리 행동까지 연결한 서비스 흐름</h3>
               <p class="lead">
-                사용자가 건강 설문을 입력하면 백엔드가 건강 입력값과 생활습관 데이터를 저장하고,
-                <br>AI Worker를 통해 예측한 결과를 대시보드, 피드백, 건강 조언, 챌린지, 리포트 흐름과 연결합니다.
+                사용자가 건강 설문과 건강 기록을 입력하면 백엔드가 입력 스냅샷을 구성하고,
+                AI Worker를 통해 예측한 결과를 대시보드, 피드백, 건강 조언, 챌린지, 리포트 흐름과 연결합니다.
               </p>
               <ul>
                 <li>회원가입, 이메일 인증, JWT 인증, 건강 설문 온보딩 흐름 구성</li>
                 <li>건강기록, 예측 요청, 예측 결과, 예측 피드백 API 흐름 구현</li>
                 <li>조언, 챌린지, 가상 펫, 리포트, 알림 기능을 건강관리 행동 유도 모듈로 분리</li>
+                <li>AWS EC2, Docker Compose, Nginx, HTTPS 기반 배포 후 핵심 API P95 3초 이내와 실패율 0% 확인</li>
               </ul>
             </div>
             <div class="image-row three">
               <figure class="image-card">
-                <img src="images/chronic_disease/건강 설문 입력 화면.png" alt="건강 설문 입력 화면" />
-                <figcaption>건강 설문: 예측 입력값과 생활습관 데이터 수집</figcaption>
+                <img src="images/chronic_disease/홈 대시보드 화면.png" alt="All4Health 홈 대시보드 화면" />
+                <figcaption>홈 대시보드: 건강 기록, 예측, 조언, 챌린지 진입점</figcaption>
               </figure>
               <figure class="image-card">
-                <img src="images/chronic_disease/예측 이력 화면.png" alt="예측 이력 화면" />
-                <figcaption>예측 이력: 질환별 결과와 이전 예측 기록 확인</figcaption>
+                <img src="images/chronic_disease/LLM-오늘의 조언 화면.png" alt="LLM 오늘의 건강 조언 화면" />
+                <figcaption>건강 조언: 예측 결과와 기록 기반 맞춤형 관리 안내</figcaption>
               </figure>
               <figure class="image-card">
-                <img src="images/chronic_disease/예측 피드백 화면.png" alt="예측 피드백 화면" />
-                <figcaption>예측 피드백: 사용자 피드백을 모델 개선 데이터로 연결</figcaption>
+                <img src="images/chronic_disease/챌린지 화면.png" alt="건강 챌린지 화면" />
+                <figcaption>챌린지: 생활습관 개선 행동을 지속시키는 참여 흐름</figcaption>
               </figure>
             </div>
           </div>
@@ -1198,6 +1307,13 @@
         </section>
       </main>
     </div>
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true" role="dialog" aria-label="이미지 확대 보기">
+      <button class="image-lightbox__close" type="button" aria-label="이미지 확대 닫기">&times;</button>
+      <figure class="image-lightbox__figure">
+        <img class="image-lightbox__image" src="" alt="" />
+        <figcaption class="image-lightbox__caption"></figcaption>
+      </figure>
+    </div>
     <script>
       const tocLinks = Array.from(document.querySelectorAll('.toc a'));
       const slideGroups = {
@@ -1240,6 +1356,45 @@
 
       document.querySelectorAll('.slide[id]').forEach((slide) => observer.observe(slide));
       activateMenu(menuTargetForSlide(location.hash.slice(1)) || 'intro');
+
+      const lightbox = document.getElementById('imageLightbox');
+      const lightboxImage = lightbox.querySelector('.image-lightbox__image');
+      const lightboxCaption = lightbox.querySelector('.image-lightbox__caption');
+      const lightboxClose = lightbox.querySelector('.image-lightbox__close');
+
+      function openLightbox(image) {
+        const figure = image.closest('figure');
+        const caption = figure?.querySelector('figcaption')?.textContent || image.alt || '';
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt || caption;
+        lightboxCaption.textContent = caption;
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        lightboxClose.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        lightboxImage.src = '';
+      }
+
+      document.querySelectorAll('.image-card img').forEach((image) => {
+        image.addEventListener('click', () => openLightbox(image));
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+          closeLightbox();
+        }
+      });
     </script>
   </body>
 </html>
