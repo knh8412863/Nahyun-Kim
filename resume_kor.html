@@ -168,6 +168,7 @@
   <body>
     <header>
       <h1>김나현</h1>
+          <p><strong>AI 모델을 서비스 흐름 안에서 작동하게 만드는 AI 엔지니어</strong></p>
           <p>
             <span>
               <i class="fa-solid fa-envelope"></i>
@@ -190,19 +191,36 @@
     </header>
 
     <section>
-      <h2>👤 소개</h2>
+      <h2>소개</h2>
       <p class="summary-text">
-        데이터 기반 문제 정의부터 모델링, 검증, API/DB 설계와 서비스 연동 흐름까지 경험한 AI 엔지니어 지원자입니다.<br />
-        여러 팀 프로젝트를 이끌며, 예측 모델 개발 및 데이터 분석 프로젝트를 주도했으며, 현재는 모델 결과를 실제 서비스 기능으로 연결하는 프로젝트를 진행하고 있습니다.<br />
-        신뢰할 수 있는 AI 기능을 사용자에게 전달하는 개발자로 성장하고자 합니다.
+         Python 기반 데이터 분석과 머신러닝 모델링을 바탕으로, 문제 정의부터 전처리, 모델링, 검증, 서비스 적용까지의 흐름을 경험했습니다.
+         모델 성능 자체에만 머무르기보다, 예측 결과가 사용자 경험과 업무 흐름 안에서 어떻게 활용되는지를 함께 고민합니다.
+         FastAPI, SQL, React를 활용해 AI 기능을 API와 웹 서비스로 연결한 프로젝트를 진행했으며, 최근에는 RAG와 승인 워크플로우를 결합한 업무지원 서비스를 구현했습니다.
+         앞으로는 신뢰할 수 있는 AI 시스템을 만들고, 모델의 결과를 실제 제품 안에서 안정적으로 사용할 수 있게 설계하는 AI 엔지니어로 성장하고 싶습니다.
       </p>
     </section>
 
     <section>
-      <h2>🗂️ 프로젝트</h2>
+      <h2>프로젝트</h2>
       <div class="entry">
         <div class="entry-main">
-          <div class="entry-title">💪 만성질환 생활습관 챌린지 웹 서비스 - All4Health 💪</div>
+          <div class="entry-title">WorkMate AX</div>
+          <div class="entry-meta">
+            사내 문서 기반 업무지원 RAG + 승인 워크플로우 서비스 · 개인 프로젝트 ·
+            <a href="https://github.com/knh8412863/WorkMate-AX" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>FastAPI 기반 사내 문서 RAG와 승인 워크플로우 API를 설계하고, 문서 관리·질의응답·승인·이력 조회 기능 구현</li>
+            <li>문서 업로드 후 chunking, 검색, 답변 생성, 출처 문장 표시와 신뢰도 기반 “확인 필요” 표시 기능 구현</li>
+            <li>이메일, 보고서, 회의록, 업무 요청서 초안 생성 후 승인/반려하는 human-in-the-loop 흐름 구성</li>
+            <li>요청 이력, 답변 이력, 감사 로그를 저장해 기업형 AI 서비스에 필요한 검토 가능성과 추적성 반영</li>
+          </ul>
+        </div>
+        <div class="entry-period">2026.06 ~ 2026.07</div>
+      </div>
+      <div class="entry">
+        <div class="entry-main">
+          <div class="entry-title">만성질환 생활습관 챌린지 웹 서비스 - All4Health</div>
           <div class="entry-meta">
             AI 헬스케어 예측 모델 · FastAPI/React 풀스택 웹 서비스 ·
             <a href="https://github.com/knh8412863/Chronic-Life-Challenge" target="_blank" rel="noreferrer">GitHub</a>
@@ -218,7 +236,7 @@
       </div>
       <div class="entry">
         <div class="entry-main">
-          <div class="entry-title">🧬 난임 환자 대상 임신 성공 여부 예측 🧬</div>
+          <div class="entry-title">난임 환자 대상 임신 성공 여부 예측 🧬</div>
           <div class="entry-meta">
             헬스케어 데이터 분류 모델 ·
             <a href="https://github.com/knh8412863/Fertility-Success-Predictor" target="_blank" rel="noreferrer">GitHub</a>
@@ -233,7 +251,7 @@
       </div>
       <div class="entry">
         <div class="entry-main">
-          <div class="entry-title">🫀 칼로리 소모량 예측 AI 해커톤 🫀</div>
+          <div class="entry-title">칼로리 소모량 예측 AI 해커톤</div>
           <div class="entry-meta">
             생체 지표 기반 회귀 예측 모델 ·
             <a href="https://github.com/knh8412863/BioMetric-Calorie-Predictor" target="_blank" rel="noreferrer">GitHub</a>
@@ -260,65 +278,31 @@
         </div>
         <div class="entry-period">2026.01</div>
       </div>
-      <div class="entry">
-        <div class="entry-main">
-          <div class="entry-title">🦾 3D 프린팅 기반 로봇 의수 프로토타입 🦾</div>
-          <div class="entry-meta">재활공학 하드웨어 프로토타입</div>
-          <ul>
-            <li>(팀장) 제작 일정 관리, 부품 조립, 출력물 후가공, 제작 과정 문서화 주도</li>
-            <li>CATIA/Cura 기반 3D 프린팅 부품과 Flex 센서, Arduino, 서보모터를 활용한 로봇 의수 프로토타입 제작</li>
-          </ul>
-        </div>
-        <div class="entry-period">2019.09 ~ 2019.12</div>
-      </div>
+
     </section>
 
 
     <section>
-      <h2>📖 교육</h2>
+      <h2>교육</h2>
       <div class="entry">
         <div class="entry-main">
           <div class="entry-title">헬스케어 데이터 기반 인공지능 디지털 의료 웹 서비스 개발자 양성과정</div>
           <div class="entry-meta">오즈코딩스쿨</div>
           <ul>
-            <li>헬스케어 도메인 지식을 바탕으로 데이터 분석부터 AI 모델링, 웹 서비스 배포까지의 과정 수행</li>
-            <li>AI & 데이터 분석: 머신러닝/딥러닝 모델 설계 및 의학용어·질병 데이터를 활용한 헬스케어 특화 데이터 전처리 및 시각화 역량 습득</li>
-            <li>웹 서비스 개발: FastAPI 프레임워크를 활용한 RESTful API 설계 및 HTML/CSS/Javascript 기반의 반응형 웹 서비스 구조 구현</li>
-            <li>클라우드 및 인프라: Docker 컨테이너 가상화와 AWS 환경을 활용한 클라우드 기반 서비스 배포 및 인프라 운영 프로세스 학습</li>
-            <li>실무 중심의 미니 프로젝트와 해커톤 참여를 통해 데이터 기반 예측 모델 구현 및 Git/GitHub 기반의 팀 협업 워크플로우 숙달</li>
+            <li>헬스케어 데이터를 활용한 머신러닝·딥러닝 모델 개발 및 데이터 전처리 수행</li>
+            <li>FastAPI 기반 AI 서비스 개발과 REST API 설계·구현</li>
+            <li>Docker, AWS를 활용한 AI 서비스 배포 및 운영 환경 구축</li>
+            <li>프로젝트와 해커톤을 통해 AI 모델 개발부터 서비스 구현·협업까지의 전 과정 경험</li>
           </ul>
         </div>
         <div class="entry-period">2025.12 ~ 2026.06</div>
       </div>
-      <div class="entry">
-        <div class="entry-main">
-          <div class="entry-title">사물인터넷(IoT) 국비 교육 과정</div>
-          <div class="entry-meta"></div>
-          <ul>
-            <li>아두이노 IDE 환경 기반의 하드웨어 제어 및 IoT 시스템 기초 습득</li>
-            <li>조도·초음파·온습도 등 10여 종의 센서 데이터 수집 및 서보모터, 블루투스 모듈을 활용한 액추에이터 제어 실습</li>
-            <li>C언어 기반의 임베디드 프로그래밍 및 시리얼 통신을 통한 데이터 모니터링 역량 확보</li>
-         </ul>
-        </div>
-        <div class="entry-period">2023.01</div>
-      </div>
-      <div class="entry">
-        <div class="entry-main">
-          <div class="entry-title">생체역학 실험실 학부연구생</div>
-          <div class="entry-meta">대구대학교 재활공학과</div>
-          <ul>
-            <li>자기주도적 기술 습득: C언어 및 AutoCAD를 추가 학습하여 기술적 문제 해결 역량 배양</li>
-            <li>연구실 운영 지원: 연구실 인프라(3D 프린터 등 장비) 및 비품 관리와 교수님 수업 보조를 전담하며 원활한 연구/교육 환경 조성에 기여</li>
-            <li>데이터 관리 보조: 실험 데이터 측정 및 기록 보조 업무를 수행하며 데이터의 무결성과 연구 프로세스 전반에 대한 이해도 제고</li>
-            <li>교내 프로젝트 참여: 연구실 내 자습을 통해 쌓은 역량을 바탕으로 '3D 프린팅 기반 로봇 의수 제작' 프로젝트에 참여하여 하드웨어 프로토타입 제작 경험 보유</li>
-         </ul>
-        </div>
-        <div class="entry-period">2018.09 ~ 2020.02</div>
-      </div>
+
+
     </section>
 
     <section>
-      <h2>📚 자격증</h2>
+      <h2>자격증</h2>
       <div class="entry compact">
         <div class="entry-main">
           <div class="entry-title">정보처리기사</div>
@@ -330,28 +314,7 @@
         </div>
         <div class="entry-period">2025.12</div>
       </div>
-      <div class="entry compact">
-        <div class="entry-main">
-          <div class="entry-title">CCNA (200-301)</div>
-          <div class="entry-meta">
-            <a href="https://drive.google.com/file/d/15f9YwAhg78VYImnNqa1EfFQvZNIQ9mlh/preview" target="_blank" rel="noreferrer"
-              >CISCO</a
-            >
-          </div>
-        </div>
-        <div class="entry-period">2025.01 ~ 2028.01</div>
-      </div>
-      <div class="entry compact">
-        <div class="entry-main">
-          <div class="entry-title">네트워크관리사 2급</div>
-          <div class="entry-meta">
-            <a href="https://drive.google.com/file/d/13Vf7Rb8dEFKPRS6GcHDu04yEbPH0PHOO/preview" target="_blank" rel="noreferrer"
-              >한국정보통신자격협회</a
-            >
-          </div>
-        </div>
-        <div class="entry-period">2023.04</div>
-      </div>
+
       <div class="entry compact">
         <div class="entry-main">
           <div class="entry-title">SQLD</div>
@@ -363,32 +326,20 @@
         </div>
         <div class="entry-period">2024.06</div>
       </div>
-      <div class="entry compact">
-        <div class="entry-main">
-          <div class="entry-title">한국사능력검정시험 1급</div>
-          <div class="entry-meta">
-            <a href="https://drive.google.com/file/d/1kcmLl4yd1k4vW-xJCc4qAmLWss58QaUc/preview" target="_blank" rel="noreferrer"
-              >국사편찬위원회</a
-            >
-          </div>
-        </div>
-        <div class="entry-period">2025.06</div>
-      </div>
+
     </section>
 
     <section>
-      <h2>🛠️ 기술</h2>
+      <h2>기술</h2>
       <div class="entry-grid">
         <div class="entry no-period">
           <div class="entry-main">
-            <div class="entry-title">Data / AI</div>
+            <div class="entry-title">Language</div>
             <div class="entry-meta">
               <ul>
                 <li>Python</li>
-                <li>pandas / NumPy</li>
-                <li>scikit-learn</li>
-                <li>Matplotlib / Seaborn</li>
-                <li>Jupyter Notebook</li>
+                <li>SQL</li>
+                <li>C</li>
               </ul>
             </div>
           </div>
@@ -398,27 +349,9 @@
             <div class="entry-title">Backend</div>
             <div class="entry-meta">
               <ul>
-                <li>Java</li>
-                <li>C</li>
                 <li>FastAPI</li>
                 <li>Tortoise ORM</li>
-                <li>Pydantic</li>
-                <li>PyMongo</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="entry no-period">
-          <div class="entry-main">
-            <div class="entry-title">Database / Infra</div>
-            <div class="entry-meta">
-              <ul>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>Redis</li>
-                <li>Nginx</li>
-                <li>Docker / Docker Compose</li>
-                <li>Git / GitHub</li>
+                <li>Aerich</li>
               </ul>
             </div>
           </div>
@@ -429,17 +362,66 @@
             <div class="entry-meta">
               <ul>
                 <li>React</li>
-                <li>TypeScript</li>
                 <li>Vite</li>
-                <li>JavaScript</li>
                 <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="entry no-period">
           <div class="entry-main">
-            <div class="entry-title">언어</div>
+            <div class="entry-title">AI / Data</div>
+            <div class="entry-meta">
+              <ul>
+                <li>Scikit-learn</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>OpenAI API</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Database</div>
+            <div class="entry-meta">
+              <ul>
+                <li>MySQL</li>
+                <li>Redis</li>
+                <li>SQLite</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Infra / DevOps</div>
+            <div class="entry-meta">
+              <ul>
+                <li>AWS</li>
+                <li>Docker / Docker Compose</li>
+                <li>Nginx / HTTPS / Certbot</li>
+                <li>Linux / uv</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">Collaboration</div>
+            <div class="entry-meta">
+              <ul>
+                <li>Git / GitHub</li>
+                <li>Notion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="entry no-period">
+          <div class="entry-main">
+            <div class="entry-title">어학</div>
             <div class="entry-meta">
               <ul>
                 <li>한국어(모국어)</li>
@@ -452,7 +434,7 @@
     </section>
 
     <section>
-      <h2>🎓 학력</h2>
+      <h2>학력</h2>
       <div class="entry">
         <div class="entry-main">
           <div class="entry-title">컴퓨터 공학 학사</div>
@@ -470,6 +452,6 @@
     </section>
 
 
-    <footer>© 2026 김나현 · 마지막 업데이트: 2026년 6월</footer>
+    <footer>© 2026 김나현 · 마지막 업데이트: 2026년 7월</footer>
   </body>
 </html>
