@@ -53,7 +53,7 @@
       .actions {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 12px;
         margin-top: 36px;
       }
@@ -80,7 +80,6 @@
       }
 
       .actions .portfolio-link {
-        grid-column: 1 / -1;
         color: #fff;
         background: #111;
       }
@@ -94,10 +93,6 @@
           width: 144px;
           height: 144px;
         }
-
-        .actions {
-          grid-template-columns: 1fr;
-        }
       }
     </style>
   </head>
@@ -107,9 +102,7 @@
       <h1>김나현 _ Nahyun Kim</h1>
       <p>AI Engineer</p>
 
-      <div class="actions" aria-label="이력서 언어 선택">
-        <a href="resume_kor.html"> 🇰🇷 한글 이력서</a>
-        <a href="resume_eng.html"> 🇺🇸 English Resume</a>
+      <div class="actions">
         <a class="portfolio-link" href="portfolio.html">Portfolio</a>
       </div>
     </main>
